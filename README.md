@@ -1,21 +1,21 @@
-# 🌐 Christine's Portfolio Website
+# 🌐 My Portfolio Website
 A personal portfolio website built with vanilla HTML and CSS, designed to showcase my skills, background, and achievements.
 
 ## 🔍 Overview
-This is a solo project developed during a PHP portfolio building hackathon. The goal is to create a compelling digital presence that highlights:
+This is a solo project developed during a **PLP portfolio building hackathon**. The goal is to create a compelling digital presence that highlights:
 
-My programming skills
+- My programming skills
 
-Educational background
+- Educational background
 
-Professional interests
+- Professional interests
 
-Personal projects
+- Personal projects
 
-A clear way to connect with me
+- A clear way to connect with me
 
 ## 🚀 Live Demo
-Check out the live version of my portfolio here: Live Demo on Vercel
+Check out the live version of my portfolio here: [My Portfolio](https://my-portfolio-mu-two-47.vercel.app/)
 
 ## 📁 Project Structure
 ```
@@ -44,36 +44,36 @@ PortfolioHackathon/
 📩 Contact form for collaboration or inquiries
 
 ## 🛠️ Technologies Used
-HTML5
+- HTML5
 
-CSS3
+- CSS3
 
 ## 🧠 How to Use
-Clone the repository:
+1. Clone the repository:
  ```bash
 git clone https://github.com/christinemirimba/My-Portfolio
 ```
-Open index.html in your preferred browser.
+2. Open *index.html*  in your preferred browser.
 
-Customize the text and links as needed.
+3. Customize the text and links as needed.
 
 ## 🌱 How to Customize
-Update your personal information inside index.html
+- Update your personal information inside index.html
 
-Modify styles in style.css
+- Modify styles in style.css
 
-Add or update your project links and descriptions
+- Add or update your project links and descriptions
 
-Replace the CV download link with your own file
+- Replace the CV download link with your own file
 
 ## 🚀 Deployment
 This site is deployed using Vercel. You can deploy your own version by:
 
-Linking your GitHub repo to Vercel
+1. Linking your GitHub repo to Vercel
 
-Clicking "Import Project"
+2. Clicking "Import Project"
 
-Following the setup steps
+3. Following the setup steps
 
 ---
 

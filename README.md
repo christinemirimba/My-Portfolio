@@ -2,7 +2,7 @@
 A personal portfolio website built with vanilla HTML and CSS, designed to showcase my skills, background, and achievements.
 
 ## 🔍 Overview
-This is a solo project developed during a portfolio building hackathon. The goal is to create a compelling digital presence that highlights:
+This is a solo project developed during a PHP portfolio building hackathon. The goal is to create a compelling digital presence that highlights:
 
 My programming skills
 

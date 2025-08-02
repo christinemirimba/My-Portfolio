@@ -1,63 +1,61 @@
 /*
- * Hey there! This is the CSS file for Christine's portfolio.
- * I've tried to keep things organized and easy to read.
- * We're just using pure HTML and CSS here, no fancy libraries.
- * Let's dive in!
+ * ============================
+ * Global Stuff & Color Palette
+ * ============================
  */
 
-/* ============================ */
-/* Global Stuff & Color Palette */
-/* ============================ */
+/* Importing the Poppins font from Google Fonts for a clean, modern look. */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-/* Defining some custom properties (variables) to make changing colors a breeze. */
+/* Defining custom properties (CSS variables) for a maintainable color scheme. */
 :root {
-    --primary-color: #ffdb58;      /* The main bright yellow for accents. It's a key part of the style! */
-    --secondary-color: #2c3e50;    /* A nice dark blue-gray for the main background. */
-    --accent-color-1: #e74c3c;     /* A vibrant red for buttons and hover effects. */
-    --accent-color-2: #3498db;     /* A cool blue for other details, to add some variety. */
-    --background-color: #2c3e50;   /* Let's stick with the dark blue-gray for the body. */
-    --card-background: #34495e;    /* A slightly lighter shade for our main content cards. */
-    --text-color: #ecf0f1;         /* A light gray for easy-to-read text. */
-    --heading-color: #ffffff;      /* Pure white for headings to make them pop. */
-    --light-text-color: #bdc3c7;   /* A softer gray for paragraphs. */
-    --poppins: 'Poppins', sans-serif; /* The font choice. It's clean and modern. */
-    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* A subtle shadow for depth. */
+    --primary-color: #ffdb58;          /* Bright yellow for accents and highlights */
+    --secondary-color: #2c3e50;        /* Dark blue-gray for backgrounds and main text */
+    --accent-color-1: #e74c3c;         /* Vibrant red for buttons and hover effects */
+    --accent-color-2: #3498db;         /* Cool blue for other details */
+    --background-color: #2c3e50;       /* Main body background color */
+    --card-background: #34495e;        /* A slightly lighter shade for content cards */
+    --text-color: #ecf0f1;             /* Light gray for high-contrast text */
+    --heading-color: #ffffff;          /* Pure white for prominent headings */
+    --light-text-color: #bdc3c7;       /* A softer gray for paragraphs and descriptions */
+    --font-family: 'Poppins', sans-serif; /* The primary font for the site */
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* A subtle shadow for depth on elements */
 }
 
-/* A universal reset for basic styling inconsistencies across browsers. */
+/* A universal reset to normalize browser styles and box model. */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Makes the page scroll smoothly when you click on navigation links. It's a nice touch! */
+/* Enabling smooth scrolling for anchor links. */
 html {
     scroll-behavior: smooth;
 }
 
-/* Setting the base font and background for the entire page. */
+/* Applying base styles to the body of the document. */
 body {
-    font-family: var(--poppins);
+    font-family: var(--font-family);
     line-height: 1.6;
     background-color: var(--background-color);
     color: var(--text-color);
 }
 
-/* This container keeps our content neatly centered on the page. */
+/* A reusable container to center content and provide consistent padding. */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
 }
 
-/* Basic styles for all our heading elements. */
+/* Styling for all main headings. */
 h1, h2, h3 {
     color: var(--heading-color);
     font-weight: 600;
 }
 
-/* Styling for the main section titles. The `::after` part creates that cool yellow line underneath. */
+/* Styling for main section titles, including the yellow underline effect. */
 h2 {
     font-size: 2.5rem;
     text-align: center;
@@ -77,19 +75,26 @@ h2::after {
     border-radius: 2px;
 }
 
-/* Making all links look and feel consistent. The transition is for a smooth color change. */
+/* Consistent styling for all links. */
 a {
     text-decoration: none;
     color: var(--primary-color);
     transition: color 0.3s ease;
 }
 
-/* Removing the default bullets from lists. */
+/* Removing default list bullets. */
 ul {
     list-style: none;
 }
 
-/* This is the base style for all our buttons. */
+
+/*
+ * ============================
+ * Button Styles
+ * ============================
+ */
+
+/* Base style for all buttons. */
 .btn {
     display: inline-block;
     padding: 1rem 2.5rem;
@@ -97,9 +102,11 @@ ul {
     font-weight: 500;
     text-transform: uppercase;
     transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
 }
 
-/* The style for our primary button, like the "Get in Touch" one. */
+/* Primary button style (e.g., "Get in Touch"). */
 .btn.primary-btn {
     background-color: var(--primary-color);
     color: var(--secondary-color);
@@ -110,7 +117,7 @@ ul {
     transform: translateY(-3px);
 }
 
-/* The style for our secondary button, like the "Download CV" button. */
+/* Secondary button style (e.g., "Download CV"). */
 .btn.secondary-btn {
     background-color: var(--accent-color-1);
     color: var(--text-color);
@@ -121,7 +128,7 @@ ul {
     transform: translateY(-3px);
 }
 
-/* The style for our tertiary buttons, like the "View Project" buttons. */
+/* Tertiary button style (e.g., "View Project"). */
 .btn.tertiary-btn {
     background-color: transparent;
     border: 2px solid var(--accent-color-2);
@@ -134,9 +141,11 @@ ul {
 }
 
 
-/* ========================= */
-/* Header & Navigation       */
-/* ========================= */
+/*
+ * ============================
+ * Header & Navigation
+ * ============================
+ */
 
 .header {
     position: fixed;
@@ -144,8 +153,8 @@ ul {
     top: 0;
     left: 0;
     z-index: 100;
-    background-color: rgba(44, 62, 80, 0.9);
-    backdrop-filter: blur(5px);
+    background-color: rgba(44, 62, 80, 0.9); /* Semi-transparent dark background */
+    backdrop-filter: blur(5px); /* Adds a cool blur effect */
     box-shadow: var(--box-shadow);
 }
 
@@ -162,12 +171,13 @@ ul {
     color: var(--heading-color);
 }
 
+/* Navigation links on desktop. */
 .nav-links {
     display: flex;
     gap: 2rem;
 }
 
-/* A fun little animation for the navigation links. The line fills up on hover. */
+/* Styling for individual navigation links with an animated underline effect. */
 .nav-links a {
     color: var(--heading-color);
     font-weight: 500;
@@ -191,15 +201,53 @@ ul {
 }
 
 
-/* ========================= */
-/* Hero Section              */
-/* ========================= */
+/*
+ * ============================
+ * Hamburger Menu
+ * ============================
+ */
 
-/* Our hero section, covering the full screen with a background image and a cool gradient overlay. */
+/* Hamburger menu is hidden on large screens by default. */
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    z-index: 101;
+}
+
+/* Styling for the three bars of the hamburger icon. */
+.hamburger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--primary-color);
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+/* Animations for the hamburger icon when the menu is active. */
+.hamburger-menu.toggle .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger-menu.toggle .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.toggle .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+/*
+ * ============================
+ * Hero Section
+ * ============================
+ */
+
 .hero-section {
     min-height: 100vh;
     display: flex;
     align-items: center;
+    /* Using a dark, tech-themed background image with a color overlay. */
     background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('https://source.unsplash.com/random/1600x900/?dark,technology') no-repeat center center/cover;
     padding-top: 5rem;
 }
@@ -239,7 +287,7 @@ ul {
     text-align: right;
 }
 
-/* Making your profile picture a perfect circle with a yellow border. */
+/* Styling the profile image with a circular shape and a yellow border. */
 .hero-image img {
     width: 400px;
     height: 400px;
@@ -250,16 +298,18 @@ ul {
 }
 
 
-/* ========================= */
-/* About Me Section          */
-/* ========================= */
+/*
+ * ============================
+ * Reusable Section & Card Styles
+ * ============================
+ */
 
-/* This section has a unique background to make it stand out. */
+/* Base padding for all main content sections. */
 .section {
     padding: 6rem 0;
-    background-color: var(--card-background);
 }
 
+/* Styles for the "About Me" card with a unique background and hover effect. */
 .about-section {
     text-align: center;
     background-color: #1a252f;
@@ -278,12 +328,11 @@ ul {
     transition: transform 0.5s ease;
 }
 
-/* A subtle lift effect when you hover over the about card. */
 .about-card:hover {
     transform: translateY(-10px) scale(1.02);
 }
 
-/* The gradient overlay to make the card look more interesting. */
+/* Adding a subtle gradient overlay for visual interest. */
 .about-card::before {
     content: '';
     position: absolute;
@@ -316,16 +365,18 @@ ul {
 }
 
 
-/* ========================= */
-/* Skills Section            */
-/* ========================= */
+/*
+ * ============================
+ * Skills Section
+ * ============================
+ */
 
 .skills-section {
     background-color: var(--background-color);
     padding: 8rem 0;
 }
 
-/* Using a grid here to keep the skill categories organized and responsive. */
+/* A responsive grid for displaying skills categories. */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -333,7 +384,7 @@ ul {
     justify-content: center;
 }
 
-/* Styling for each skill card with a cool hover effect. */
+/* Styling for each skill category card with a cool hover effect. */
 .skills-category {
     background-color: var(--card-background);
     padding: 2.5rem;
@@ -355,6 +406,7 @@ ul {
     font-weight: 600;
 }
 
+/* A flexible list for displaying individual skill tags. */
 .skills-list {
     display: flex;
     flex-wrap: wrap;
@@ -362,7 +414,7 @@ ul {
     gap: 0.8rem;
 }
 
-/* Each skill is a little colored tag with a hover effect. */
+/* Styling for each individual skill tag with a hover effect. */
 .skills-list li {
     background-color: var(--accent-color-2);
     color: #fff;
@@ -379,11 +431,12 @@ ul {
 }
 
 
-/* ========================= */
-/* Other Sections            */
-/* ========================= */
+/*
+ * ============================
+ * Education Section
+ * ============================
+ */
 
-/* Education Section Styles */
 .education-section {
     background-color: var(--card-background);
 }
@@ -420,7 +473,13 @@ ul {
     margin-bottom: 0.5rem;
 }
 
-/* Interests Section Styles */
+
+/*
+ * ============================
+ * Interests Section
+ * ============================
+ */
+
 .interests-section {
     text-align: center;
     background-color: var(--background-color);
@@ -434,6 +493,7 @@ ul {
     margin-top: 3rem;
 }
 
+/* Styling for each interest tag with a subtle hover effect. */
 .interests-list li {
     background-color: var(--accent-color-2);
     color: var(--heading-color);
@@ -450,7 +510,13 @@ ul {
 }
 
 
-/* Projects Section Styles */
+/*
+ * ============================
+ * Projects Section
+ * ============================
+ */
+
+/* A responsive grid for displaying project cards. */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -465,6 +531,7 @@ ul {
     transition: transform 0.3s ease;
 }
 
+/* A hover effect to lift the project card. */
 .project-card:hover {
     transform: translateY(-10px);
 }
@@ -479,7 +546,13 @@ ul {
     margin-bottom: 1.5rem;
 }
 
-/* Contact Section Styles */
+
+/*
+ * ============================
+ * Contact Section
+ * ============================
+ */
+
 .contact-section {
     background-color: #1a252f;
     color: var(--text-color);
@@ -500,12 +573,14 @@ ul {
     color: var(--light-text-color);
 }
 
+/* A responsive grid for contact items. */
 .contact-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
     gap: 2rem;
 }
 
+/* Styling for each individual contact item. */
 .contact-item {
     display: flex;
     align-items: center;
@@ -530,13 +605,20 @@ ul {
 .contact-info p, .contact-info a {
     color: var(--text-color);
     font-weight: 300;
+    font-size: 1rem;
 }
 
 .contact-info a:hover {
     color: var(--accent-color-2);
 }
 
-/* Footer Styles */
+
+/*
+ * ============================
+ * Footer
+ * ============================
+ */
+
 .footer {
     background-color: #1a252f;
     color: #cccccc;
@@ -545,41 +627,62 @@ ul {
 }
 
 
-/* ========================= */
-/* Responsive Design         */
-/* ========================= */
+/*
+ * ============================
+ * Responsive Design (Media Queries)
+ * ============================
+ */
 
-/* This makes sure the layout looks good on smaller screens like phones and tablets. */
+/* Styles for screens up to 992px wide (e.g., tablets and mobile). */
 @media (max-width: 992px) {
-    /* Adjusting the hero section for a vertical layout on medium screens. */
+    /* Adjusting the hero section for a vertical layout on smaller screens. */
     .hero-content {
         flex-direction: column;
         text-align: center;
     }
 
     .hero-text {
-        order: 2;
+        order: 2; /* Moves the text below the image */
     }
 
     .hero-image {
-        order: 1;
+        order: 1; /* Moves the image above the text */
         text-align: center;
     }
 
-    /* We hide the navigation links here, assuming a hamburger menu would be implemented with JavaScript for a real project. */
+    /* Hiding the desktop nav links and showing the mobile menu. */
     .nav-links {
-        display: none;
-    }
-}
-
-@media (max-width: 768px) {
-    /* Fine-tuning some styles for smaller mobile screens. */
-    .hero-text .hero-name {
-        font-size: 3rem;
-    }
-
-    .skills-grid {
+        position: fixed;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        width: 60%;
+        background-color: rgba(44, 62, 80, 0.95);
+        backdrop-filter: blur(8px);
         flex-direction: column;
         align-items: center;
+        justify-content: center;
+        transform: translateX(100%); /* Initially slide the menu out of view */
+        transition: transform 0.5s ease-in;
+    }
+
+    /* The class added by JavaScript to slide in the mobile menu. */
+    .nav-links.nav-active {
+        transform: translateX(0);
+    }
+
+    .nav-links li {
+        opacity: 0; /* Initially hide links for a staggered animation. */
+    }
+
+    /* Animation to fade in the mobile nav links. */
+    .nav-links.nav-active li {
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out 0.5s;
+    }
+
+    /* Displaying the hamburger icon on mobile. */
+    .hamburger-menu {
+        display: block;
     }
 }

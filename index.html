@@ -1,19 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Just the essentials for a good website -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Christine Mirimba - My Portfolio</title>
+    <!-- Grabbing a nice, clean font from Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- This links to our stylesheet, where all the magic happens -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- The top part of the site, our main navigation bar -->
     <header class="header">
         <nav class="container navbar">
-            <a href="#" class="logo">ChristineM.</a>
+            <!-- Your name Initials as the logo -->
+            <a href="#" class="logo">CKM.</a>
+            
+            <!-- This is the hamburger menu icon. It will only be visible on mobile screens. -->
+            <div class="hamburger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+
+            <!-- Links to jump to different sections of the page -->
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
@@ -25,33 +39,42 @@
         </nav>
     </header>
 
+    <!-- This is the big hero section at the top, making a first impression -->
     <section class="hero-section">
         <div class="container hero-content">
+            <!-- The text introducing you  -->
             <div class="hero-text">
                 <p class="greeting">Hello, my name is</p>
-                <h1 class="hero-name">Christine Mirimba</h1>
-                <p class="hero-description">A highly analytical and results-oriented Computer Science graduate with a knack for problem-solving and a strong tech foundation, ready to tackle complex business challenges with strategic, data-driven thinking.</p>
+                <h1 class="hero-name">Christine Kwamboka Mirimba</h1>
+                <p class="hero-description">I'm a software developer with a passion for creating impactful and user-friendly applications. I love exploring new technologies and solving complex problems .</p>
+                <!-- A button that invites people to connect with you -->
                 <a href="#contact" class="btn primary-btn">Get in Touch</a>
             </div>
+            <!-- Your profile picture -->
             <div class="hero-image">
                 <img src="assets/profile.jpeg" alt="Christine Mirimba">
             </div>
         </div>
     </section>
 
+    <!-- The "About Me" section, telling your story -->
     <section id="about" class="section about-section">
         <div class="container">
             <h2>About Me</h2>
             <div class="about-card">
-                <p>I am a highly analytical and results-oriented individual with a strong foundation in problem-solving and technology. I have a proven ability to quickly learn and adapt, with a commitment to delivering impactful solutions and driving long-term change. My strategic thinking and data-driven insights allow me to tackle complex business challenges effectively.</p>
+                <p>Christine Mirimba is a recent Computer Science graduate fueled by curiosity and a deep love for solving real-world problems through code. I thrive at the intersection of logic, creativity, and purpose.</p>
+                <p> I'm currently a proud recipient of the Power Learn Project (PLP) scholarship, where I'm not only sharpening my technical skills but also embracing the opportunity to lead, learn, and build impactful tech solutions across Africa.</p>
+                <p>Let’s build the future, one line of code at a time.</p>
             </div>
         </div>
     </section>
 
+    <!-- Showcasing all your technical abilities here -->
     <section id="skills" class="section skills-section">
         <div class="container">
             <h2>Technical Skills</h2>
             <div class="skills-grid">
+                <!-- A category for programming languages you know -->
                 <div class="skills-category">
                     <h3>Languages</h3>
                     <ul class="skills-list">
@@ -63,6 +86,7 @@
                         <li>CSS</li>
                     </ul>
                 </div>
+                <!-- A category for the frameworks and libraries you've used -->
                 <div class="skills-category">
                     <h3>Frameworks & Libraries</h3>
                     <ul class="skills-list">
@@ -70,6 +94,7 @@
                         <li>Laravel</li>
                     </ul>
                 </div>
+                <!-- A category for your database skills -->
                 <div class="skills-category">
                     <h3>Databases</h3>
                     <ul class="skills-list">
@@ -80,6 +105,7 @@
         </div>
     </section>
 
+    <!-- Your education history lives in this section -->
     <section id="education" class="section education-section">
         <div class="container">
             <h2>Educational Background</h2>
@@ -90,11 +116,22 @@
                     <li>Led multiple university projects, including developing innovative software solutions and applications, demonstrating a proactive approach to problem identification and resolution.</li>
                     <li>Developed strong analytical and logical reasoning skills through rigorous coursework in computer science.</li>
                 </ul>
+                <!-- A button to download your CV. The file is in the 'assets' folder. -->
                 <a href="assets/CHRISTINE K MIRIMBA-CV.pdf" download class="btn secondary-btn">Download CV</a>
+            </div>
+            <!-- Card for your scholarship -->
+            <div class="education-card" style="margin-top: 2rem;">
+                <h3>Power Learn Project (PLP)</h3>
+                <p>Fully Funded Software Development Scholarship, July 2025 - Present</p>
+                <ul>
+                    <li>Sharpening technical skills and leading the development of impactful tech solutions.</li>
+                    <li>Building a strong foundation in a collaborative learning environment.</li>
+                </ul>
             </div>
         </div>
     </section>
     
+    <!-- A new section to showcase your interests, making your profile more personal. -->
     <section id="interests" class="section interests-section">
         <div class="container">
             <h2>Interests</h2>
@@ -107,10 +144,12 @@
         </div>
     </section>
 
+    <!-- The "Projects" section to show off your work -->
     <section id="projects" class="section projects-section">
         <div class="container">
             <h2>Projects</h2>
             <div class="projects-grid">
+                <!-- A card for your Doctor Appointment Booking System project -->
                 <div class="project-card">
                     <h3>Doctor Appointment Booking System</h3>
                     <p>A web-based system developed to streamline the process of booking and managing doctor appointments, improving efficiency for both patients and healthcare providers.</p>
@@ -120,11 +159,13 @@
         </div>
     </section>
 
+    <!-- This is where people can find all your contact info -->
     <section id="contact" class="section contact-section">
         <div class="container">
             <h2>Contact Me</h2>
-            <p class="contact-subheading">I'd love to hear from you!</p>
+            <p class="contact-subheading">Feel free to contact me!</p>
             <div class="contact-grid">
+                <!-- A card for your email address -->
                 <div class="contact-item">
                     <div class="contact-icon">✉️</div>
                     <div class="contact-info">
@@ -132,6 +173,7 @@
                         <p>mirimbachristine@gmail.com</p>
                     </div>
                 </div>
+                <!-- A card for your phone number -->
                 <div class="contact-item">
                     <div class="contact-icon">📞</div>
                     <div class="contact-info">
@@ -139,6 +181,7 @@
                         <p>0701609261</p>
                     </div>
                 </div>
+                <!-- A card for your location -->
                 <div class="contact-item">
                     <div class="contact-icon">📍</div>
                     <div class="contact-info">
@@ -146,6 +189,7 @@
                         <p>Nairobi, Kenya 00100</p>
                     </div>
                 </div>
+                <!-- A card for your LinkedIn profile -->
                 <div class="contact-item">
                     <div class="contact-icon">🔗</div>
                     <div class="contact-info">
@@ -157,11 +201,28 @@
         </div>
     </section>
 
+    <!-- The footer at the very bottom of the page -->
     <footer class="footer">
         <div class="container">
             <p>&copy; 2025 Christine Mirimba. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- A small script to handle the hamburger menu toggle. -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.querySelector('.hamburger-menu');
+            const navLinks = document.querySelector('.nav-links');
+
+            // Add a click event listener to the hamburger icon
+            hamburger.addEventListener('click', () => {
+                // Toggle the 'nav-active' class on the navigation links
+                navLinks.classList.toggle('nav-active');
+                // Toggle the 'toggle' class on the hamburger menu itself for animation
+                hamburger.classList.toggle('toggle');
+            });
+        });
+    </script>
 
 </body>
 </html>

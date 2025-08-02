@@ -101,6 +101,7 @@ ul {
     text-transform: uppercase;
     transition: all 0.3s ease;
     border: none;
+    text-decoration: none;
 }
 
 /* Primary button style ("Get in Touch"). */
@@ -162,6 +163,8 @@ ul {
 }
 
 .logo {
+    text-decoration: none;
+    cursor: none;
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--heading-color);
@@ -175,6 +178,7 @@ ul {
 
 /* Styling for individual navigation links with an animated underline effect. */
 .nav-links a {
+    text-decoration: none;
     color: var(--heading-color);
     font-weight: 500;
     position: relative;
@@ -195,41 +199,6 @@ ul {
 /* The hover effect to show the underline */
 .nav-links a:hover::after {
     width: 100%;
-}
-
-
-/*
- * ============================
- * Hamburger Menu
- * ============================
- */
-
-/* Hamburger menu is hidden on large screens by default. */
-.hamburger-menu {
-    display: none;
-    z-index: 101;
-}
-
-/* Styling for the three bars of the hamburger icon. */
-.hamburger-menu .bar {
-    width: 25px;
-    height: 3px;
-    background-color: var(--primary-color);
-    margin: 5px 0;
-    transition: all 0.3s ease;
-}
-
-/* Animations for the hamburger icon when the menu is active. */
-.hamburger-menu.toggle .bar:nth-child(1) {
-    transform: rotate(-45deg) translate(-5px, 6px);
-}
-
-.hamburger-menu.toggle .bar:nth-child(2) {
-    opacity: 0;
-}
-
-.hamburger-menu.toggle .bar:nth-child(3) {
-    transform: rotate(45deg) translate(-5px, -6px);
 }
 
 
@@ -259,7 +228,7 @@ ul {
 }
 
 .hero-text .greeting {
-    font-size: 1.2rem;
+    font-size: 2.5rem;
     font-weight: 400;
     color: var(--light-text-color);
 }
@@ -310,13 +279,13 @@ ul {
 /* Styles for the "About Me" card with a unique background and hover effect. */
 .about-section {
     text-align: center;
-    background-color: var(--card-background); /* Unified background color */
+    background-color: var(--card-background); 
 
     padding: 8rem 0;
 }
 
 .about-card {
-    background-color: var(--card-background); /* Unified card background */
+    background-color: var(--card-background); 
     padding: 3rem;
     border-radius: 15px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
@@ -437,11 +406,11 @@ ul {
  */
 
 .education-section {
-    background-color: var(--card-background); /* Unified background color */
+    background-color: var(--card-background); 
 }
 
 .education-card {
-    background-color: var(--secondary-color); /* Unified card background */
+    background-color: var(--secondary-color); 
     padding: 2.5rem;
     border-radius: 10px;
     box-shadow: var(--box-shadow);
@@ -515,7 +484,7 @@ ul {
  * ============================
  */
 .projects-section {
-    background-color: var(--card-background); /* Updated background color */
+    background-color: var(--card-background); 
     padding: 8rem 0;
 }
 
@@ -527,7 +496,7 @@ ul {
 }
 
 .project-card {
-    background-color: var(--secondary-color); /* Unified card background */
+    background-color: var(--secondary-color); 
     padding: 2rem;
     border-radius: 10px;
     box-shadow: var(--box-shadow);
@@ -557,7 +526,7 @@ ul {
  */
 
 .contact-section {
-    background-color: var(--background-color); /* Unified background color */
+    background-color: var(--background-color); 
     color: var(--text-color);
 }
 
@@ -588,7 +557,7 @@ ul {
     display: flex;
     align-items: center;
     gap: 1rem;
-    background-color: var(--card-background); /* Unified card background */
+    background-color: var(--card-background); 
     padding: 1.5rem;
     border-radius: 10px;
     border: 1px solid var(--accent-color-2);
@@ -597,15 +566,16 @@ ul {
 /* New styling for the Font Awesome icons */
 .contact-icon i {
     font-size: 2rem;
-    color: var(--accent-color-2);
+    color: white;
 }
 
 .contact-info h3 {
     font-size: 1.1rem;
-    color: var(--accent-color-2);
+    color: white;
 }
 
 .contact-info p, .contact-info a {
+    text-decoration: none;
     color: var(--text-color);
     font-weight: 300;
     font-size: 1rem;
@@ -645,11 +615,11 @@ ul {
     }
 
     .hero-text {
-        order: 2; /* Moves the text below the image */
+        order: 2; 
     }
 
     .hero-image {
-        order: 1; /* Moves the image above the text */
+        order: 1; 
         text-align: center;
     }
 
@@ -665,17 +635,13 @@ ul {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        transform: translateX(100%); /* Initially slide the menu out of view */
+        transform: translateX(100%); 
         transition: transform 0.5s ease-in;
     }
 
-    /* The class added by JavaScript to slide in the mobile menu. */
-    .nav-links.nav-active {
-        transform: translateX(0);
-    }
 
     .nav-links li {
-        opacity: 0; /* Initially hide links for a staggered animation. */
+        opacity: 0; 
     }
 
     /* Animation to fade in the mobile nav links. */
@@ -684,8 +650,4 @@ ul {
         transition: opacity 0.5s ease-in-out 0.5s;
     }
 
-    /* Displaying the hamburger icon on mobile. */
-    .hamburger-menu {
-        display: block;
-    }
 }

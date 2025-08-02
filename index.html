@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for consistent icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9J0B58/Vv2L5y3M6yv0I5+4E7L5Xj0d/3Lz5G5bI5p/I8z3J6n6A5B5C5f4=" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- This links to our stylesheet, where all the magic happens -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -17,8 +19,8 @@
     <!-- The top part of the site, our main navigation bar -->
     <header class="header">
         <nav class="container navbar">
-            <!-- Your name Initials as the logo -->
-            <a href="#" class="logo">CKM.</a>
+            <!-- Your name as the logo, simple and clean -->
+            <a href="#" class="logo">ChristineM.</a>
             
             <!-- This is the hamburger menu icon. It will only be visible on mobile screens. -->
             <div class="hamburger-menu">
@@ -42,15 +44,15 @@
     <!-- This is the big hero section at the top, making a first impression -->
     <section class="hero-section">
         <div class="container hero-content">
-            <!-- The text introducing you  -->
+            <!-- The text introducing you to visitors -->
             <div class="hero-text">
                 <p class="greeting">Hello, my name is</p>
-                <h1 class="hero-name">Christine Kwamboka Mirimba</h1>
+                <h1 class="hero-name">Christine Mirimba</h1>
                 <p class="hero-description">I'm a software developer with a passion for creating impactful and user-friendly applications. I love exploring new technologies and solving complex problems .</p>
                 <!-- A button that invites people to connect with you -->
                 <a href="#contact" class="btn primary-btn">Get in Touch</a>
             </div>
-            <!-- Your profile picture -->
+            <!-- Your profile picture, centered and styled -->
             <div class="hero-image">
                 <img src="assets/profile.jpeg" alt="Christine Mirimba">
             </div>
@@ -109,6 +111,7 @@
     <section id="education" class="section education-section">
         <div class="container">
             <h2>Educational Background</h2>
+            <!-- Card for your university education -->
             <div class="education-card">
                 <h3>The Catholic University of Eastern Africa</h3>
                 <p>Bachelor of Science in Computer Science, 2020 - 2024</p>
@@ -119,6 +122,7 @@
                 <!-- A button to download your CV. The file is in the 'assets' folder. -->
                 <a href="assets/CHRISTINE K MIRIMBA-CV.pdf" download class="btn secondary-btn">Download CV</a>
             </div>
+
             <!-- Card for your scholarship -->
             <div class="education-card" style="margin-top: 2rem;">
                 <h3>Power Learn Project (PLP)</h3>
@@ -153,7 +157,7 @@
                 <div class="project-card">
                     <h3>Doctor Appointment Booking System</h3>
                     <p>A web-based system developed to streamline the process of booking and managing doctor appointments, improving efficiency for both patients and healthcare providers.</p>
-                    <a href="https://github.com/christinemirimba/Doctor-Appointment-Booking-System" class="btn tertiary-btn" target="_blank">View Project</a>
+                    <a href="https://github.com/christinemirimba/Doctor-Appointment-Booking" class="btn tertiary-btn" target="_blank">View Project</a>
                 </div>
             </div>
         </div>
@@ -167,23 +171,23 @@
             <div class="contact-grid">
                 <!-- A card for your email address -->
                 <div class="contact-item">
-                    <div class="contact-icon">✉️</div>
+                    <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
                     <div class="contact-info">
                         <h3>Email address:</h3>
-                        <p>mirimbachristine@gmail.com</p>
+                        <p><a href="mailto:mirimbachristine@gmail.com">mirimbachristine@gmail.com</a></p>
                     </div>
                 </div>
                 <!-- A card for your phone number -->
                 <div class="contact-item">
-                    <div class="contact-icon">📞</div>
+                    <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
                     <div class="contact-info">
                         <h3>Phone Number:</h3>
-                        <p>0701609261</p>
+                        <p><a href="tel:0701609261">0701609261</a></p>
                     </div>
                 </div>
                 <!-- A card for your location -->
                 <div class="contact-item">
-                    <div class="contact-icon">📍</div>
+                    <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
                     <div class="contact-info">
                         <h3>Location:</h3>
                         <p>Nairobi, Kenya 00100</p>
@@ -191,7 +195,7 @@
                 </div>
                 <!-- A card for your LinkedIn profile -->
                 <div class="contact-item">
-                    <div class="contact-icon">🔗</div>
+                    <div class="contact-icon"><i class="fa-brands fa-linkedin"></i></div>
                     <div class="contact-info">
                         <h3>LinkedIn:</h3>
                         <p><a href="https://www.linkedin.com/in/christine-mirimba-51202a26b/" target="_blank">christine-mirimba</a></p>
@@ -207,22 +211,5 @@
             <p>&copy; 2025 Christine Mirimba. All rights reserved.</p>
         </div>
     </footer>
-
-    <!-- A small script to handle the hamburger menu toggle. -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const hamburger = document.querySelector('.hamburger-menu');
-            const navLinks = document.querySelector('.nav-links');
-
-            // Add a click event listener to the hamburger icon
-            hamburger.addEventListener('click', () => {
-                // Toggle the 'nav-active' class on the navigation links
-                navLinks.classList.toggle('nav-active');
-                // Toggle the 'toggle' class on the hamburger menu itself for animation
-                hamburger.classList.toggle('toggle');
-            });
-        });
-    </script>
-
 </body>
 </html>

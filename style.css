@@ -10,7 +10,7 @@
 /* Defining custom properties (CSS variables) for a maintainable color scheme. */
 :root {
     --primary-color: #ffdb58;          /* Bright yellow for accents and highlights */
-    --secondary-color: #2c3e50;        /* Dark blue-gray for backgrounds and main text */
+    --secondary-color: #2c3e50;         /* Dark blue-gray for backgrounds and main text */
     --accent-color-1: #e74c3c;         /* Vibrant red for buttons and hover effects */
     --accent-color-2: #3498db;         /* Cool blue for other details */
     --background-color: #2c3e50;       /* Main body background color */
@@ -75,11 +75,9 @@ h2::after {
     border-radius: 2px;
 }
 
-/* Consistent styling for all links. */
-a {
-    text-decoration: none;
-    color: var(--primary-color);
-    transition: color 0.3s ease;
+/* Consistent styling for all links and interactive elements. */
+a, .btn, .hamburger-menu, .skills-list li, .interests-list li, .project-card, .contact-item {
+    cursor: pointer;
 }
 
 /* Removing default list bullets. */
@@ -103,10 +101,9 @@ ul {
     text-transform: uppercase;
     transition: all 0.3s ease;
     border: none;
-    cursor: pointer;
 }
 
-/* Primary button style (e.g., "Get in Touch"). */
+/* Primary button style ("Get in Touch"). */
 .btn.primary-btn {
     background-color: var(--primary-color);
     color: var(--secondary-color);
@@ -117,7 +114,7 @@ ul {
     transform: translateY(-3px);
 }
 
-/* Secondary button style (e.g., "Download CV"). */
+/* Secondary button style ("Download CV"). */
 .btn.secondary-btn {
     background-color: var(--accent-color-1);
     color: var(--text-color);
@@ -128,11 +125,10 @@ ul {
     transform: translateY(-3px);
 }
 
-/* Tertiary button style (e.g., "View Project"). */
+/* Tertiary button style ("View Project"). */
 .btn.tertiary-btn {
-    background-color: transparent;
-    border: 2px solid var(--accent-color-2);
-    color: var(--accent-color-2);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 .btn.tertiary-btn:hover {
@@ -196,6 +192,7 @@ ul {
     transition: width 0.3s ease;
 }
 
+/* The hover effect to show the underline */
 .nav-links a:hover::after {
     width: 100%;
 }
@@ -210,7 +207,6 @@ ul {
 /* Hamburger menu is hidden on large screens by default. */
 .hamburger-menu {
     display: none;
-    cursor: pointer;
     z-index: 101;
 }
 
@@ -268,15 +264,17 @@ ul {
     color: var(--light-text-color);
 }
 
+/* Reduced the font size to give more attention to the hero description */
 .hero-text .hero-name {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 700;
     margin-top: 0.5rem;
     color: var(--heading-color);
 }
 
+/* Increased the font size to give more attention to the hero description */
 .hero-text .hero-description {
-    font-size: 1.1rem;
+    font-size: 1.8rem;
     line-height: 1.8;
     margin: 1.5rem 0;
     color: var(--light-text-color);
@@ -312,12 +310,13 @@ ul {
 /* Styles for the "About Me" card with a unique background and hover effect. */
 .about-section {
     text-align: center;
-    background-color: #1a252f;
+    background-color: var(--card-background); /* Unified background color */
+
     padding: 8rem 0;
 }
 
 .about-card {
-    background-color: #3a5068;
+    background-color: var(--card-background); /* Unified card background */
     padding: 3rem;
     border-radius: 15px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
@@ -438,11 +437,11 @@ ul {
  */
 
 .education-section {
-    background-color: var(--card-background);
+    background-color: var(--card-background); /* Unified background color */
 }
 
 .education-card {
-    background-color: #455a64;
+    background-color: var(--secondary-color); /* Unified card background */
     padding: 2.5rem;
     border-radius: 10px;
     box-shadow: var(--box-shadow);
@@ -515,6 +514,10 @@ ul {
  * Projects Section
  * ============================
  */
+.projects-section {
+    background-color: var(--card-background); /* Updated background color */
+    padding: 8rem 0;
+}
 
 /* A responsive grid for displaying project cards. */
 .projects-grid {
@@ -524,7 +527,7 @@ ul {
 }
 
 .project-card {
-    background-color: #455a64;
+    background-color: var(--secondary-color); /* Unified card background */
     padding: 2rem;
     border-radius: 10px;
     box-shadow: var(--box-shadow);
@@ -554,29 +557,29 @@ ul {
  */
 
 .contact-section {
-    background-color: #1a252f;
+    background-color: var(--background-color); /* Unified background color */
     color: var(--text-color);
 }
 
 .contact-section h2 {
-    color: var(--accent-color-2);
+    color: var(--heading-color);
 }
 
 .contact-section h2::after {
-    background-color: var(--text-color);
+    background-color: var(--primary-color);
 }
 
 .contact-subheading {
     text-align: center;
     margin-bottom: 3rem;
     font-size: 1.1rem;
-    color: var(--light-text-color);
+    color: var(--heading-color);
 }
 
 /* A responsive grid for contact items. */
 .contact-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
 
@@ -585,13 +588,14 @@ ul {
     display: flex;
     align-items: center;
     gap: 1rem;
-    background-color: #2c3e50;
+    background-color: var(--card-background); /* Unified card background */
     padding: 1.5rem;
     border-radius: 10px;
     border: 1px solid var(--accent-color-2);
 }
 
-.contact-icon {
+/* New styling for the Font Awesome icons */
+.contact-icon i {
     font-size: 2rem;
     color: var(--accent-color-2);
 }
@@ -599,7 +603,6 @@ ul {
 .contact-info h3 {
     font-size: 1.1rem;
     color: var(--accent-color-2);
-    margin-bottom: 0.2rem;
 }
 
 .contact-info p, .contact-info a {
